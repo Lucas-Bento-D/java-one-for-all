@@ -14,14 +14,10 @@ public class Anime {
         this.name = name;
         this.type = type;
         this.episodes = episodes;
-        this.gender = gender;
     }
 
     public void init(String name, String type, int episodes, String gender){
-        this.name = name;
-        this.type = type;
-
-        this.episodes = episodes;
+        this.init(this.name, this.type, this.episodes);
         this.gender = gender;
     }
 
