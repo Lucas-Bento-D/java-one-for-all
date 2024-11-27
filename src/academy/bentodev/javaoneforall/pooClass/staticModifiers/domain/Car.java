@@ -44,11 +44,19 @@ public class Car {
         return maxVelocity;
     }
 
-    public void setLimitVelocity(double limitVelocity) {
-        this.limitVelocity = limitVelocity;
+    public static void setLimitVelocity(double limitVelocity) {
+        // para o caso do metodo estatico para setar algum parametro
+        // devemos levantar que o uso do this é proibido(error), pois o this referencia o objeto alocado em memoria
+        // e quando temos um metodo estatico, poidemos não ter nenhuma instancia realizada para a classe.
+        // vale lembrar não só pra esse, mas pra qualquer caso que o uso do this depende que a classe tenha um endereço de memoria, ou seja, esteja instanciada
+        Car.limitVelocity = limitVelocity;
     }
 
-    public double getLimitVelocity() {
-        return limitVelocity;
+    public static double getLimitVelocity() {
+        return Car.limitVelocity;
     }
 }
+
+// Vale ressaltar também que o static é usado pra prever que não teremos instancia da classe
+// E que também os metodos statics só podem usar atributos 'static' dentro deles,
+// pois sabemos que um atributo normal necessita de uma instancia pra ser iniciado e o static não
