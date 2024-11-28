@@ -8,6 +8,15 @@ package academy.bentodev.javaoneforall.pooClass.heritage.domain;
 public class Employee extends Person{
     private double salary;
 
+    public Employee(String name, String cpf){
+        // Quando chamamos 'super' com os parametros name e cpf, estamos chamando o
+        // construtor 'Person' e passando os parametros desejados
+        // Alem disso, o super precisa ser sempre a primeira linha da função
+        // ou seja, não conseguimos usar super e this na mesma função
+        // pois o this tem a mesma regra
+        super(name, cpf);
+    }
+
     // aqui estamos sobreescrevendo o metodo print de Person
     // ou seja, quando um 'Employee' chamar o metodo print()
     // vai ser esse e não o print() de 'Person'
