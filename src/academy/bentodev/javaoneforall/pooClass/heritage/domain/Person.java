@@ -1,9 +1,13 @@
 package academy.bentodev.javaoneforall.pooClass.heritage.domain;
 
 public class Person {
-    private String name;
-    private String cpf;
-    private Address address;
+//    o modificador de acesso 'protected' dá acesso as variaveis
+    // dentro da propria classe, pelas classes do mesmo pacote e pelas classes filhas também
+    // ou seja, para a classe Employee, as propriedades protegidas são acessiveis, pois essa é uma classe filha de Person
+    // assim como é acessivel para Address, pois esta no mesmo pacote
+    protected String name;
+    protected String cpf;
+    protected Address address;
 
 //    public Person(String name, String cpf){
 //        this.name = name;
