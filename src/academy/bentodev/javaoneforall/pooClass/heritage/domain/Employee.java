@@ -8,6 +8,33 @@ package academy.bentodev.javaoneforall.pooClass.heritage.domain;
 public class Employee extends Person{
     private double salary;
 
+    /**
+     * Para classes de herança, temos uma inicialização diferente
+     * 1 - Temos a inicialização static da super classe (nesse caso 'Person')
+     * 2 - inicialização da classe que está estendendo(nesse caso 'Employee')
+     *
+     * 3 - Alocação de memoria para o objeto da super classe
+     * 4 - Criação dos atributos e inicialização com valores default ou oque for passado da super classe
+     * 5 - inicialização de todos os blocos de inicialização da super classe
+     * 6 - inicialização do construtor da super classe
+     *
+     * 7 - Alocação de memoria para o objeto da classe filha
+     * 8 - Criação dos atributos e inicialização com valores default ou oque for passado da classe filha
+     * 9 - inicialização de todos os blocos de inicialização filho
+     * 10 - inicialização do construtor do filho
+     * */
+
+    static{
+        System.out.println("Dentro do bloco inicialização estático de funcionario");
+    }
+
+    {
+        System.out.println("Dentro do bloco inicialização de funcionario1");
+    }
+    {
+        System.out.println("Dentro do bloco inicialização de funcionario2");
+    }
+
     public Employee(String name, String cpf){
         // Quando chamamos 'super' com os parametros name e cpf, estamos chamando o
         // construtor 'Person' e passando os parametros desejados
@@ -15,6 +42,7 @@ public class Employee extends Person{
         // ou seja, não conseguimos usar super e this na mesma função
         // pois o this tem a mesma regra
         super(name, cpf);
+        System.out.println("dentro do construtor funcionario");
     }
 
     // aqui estamos sobreescrevendo o metodo print de Person

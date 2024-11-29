@@ -9,7 +9,20 @@ public class Person {
     protected String cpf;
     protected Address address;
 
+    static{
+        System.out.println("Dentro do bloco inicialização estático de pessoa");
+    }
+
+    {
+        System.out.println("Dentro do bloco inicialização de pessoa1");
+    }
+    {
+        System.out.println("Dentro do bloco inicialização de pessoa2");
+    }
+
+
     public Person(String name, String cpf){
+        System.out.println("dentro do construtor pessoa");
         this.name = name;
         this.cpf = cpf;
     }
