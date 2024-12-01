@@ -1,5 +1,11 @@
 package academy.bentodev.javaoneforall.pooClass.finalModifier.domain;
 
+/**
+ * podemos setar uma classe como "final", isso faz com que essa classe
+ * não possa ser extendida para outra classe, pois os metodos não poderão
+ * ser modificados(como recentemente vimos com toString por exemplo)
+ */
+
 public class Car {
     private String name;
     /**
@@ -46,5 +52,13 @@ public class Car {
 
     public Buyer getBUYER() {
         return BUYER;
+    }
+
+    /**
+     * Podemos também setar um  metodo como "final", isso faz com que
+     * esse metodo não possa ser sobrescrito
+     */
+    public final void print(){
+        System.out.println(this.name);
     }
 }
