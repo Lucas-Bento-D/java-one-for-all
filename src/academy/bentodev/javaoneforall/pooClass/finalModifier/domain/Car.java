@@ -28,11 +28,23 @@ public class Car {
 
     private static final  double LIMIT_VELOCITY = 250;
 
+    /**
+     * Para constantes com tipagem de referencia, quando setamos como final
+     * não estamos setando um valor para a constante e sim pra onde ela sempre vai fazer referencia
+     * ou seja, o valor de "BUYER" é o objeto "Buyer", mas isso não quer dizer que dentro do objeto
+     * já tenha algum valor imodificavel, apenas quer dizer que a referencia dele é imodificavel
+     */
+    private final Buyer BUYER = new Buyer();
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Buyer getBUYER() {
+        return BUYER;
     }
 }
