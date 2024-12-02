@@ -7,5 +7,6 @@ public class CarTest {
         Car car = new Car();
         car.getBUYER().setName("Junior");
         System.out.println(car.getBUYER().getName());
+
     }
 }
