@@ -23,6 +23,21 @@ public enum ClientType {
         this.VALUE = value;
     }
 
+    /**
+     * Podemos ainda buscar dados na classe baseado com o parametro utilizado(pode ser qualquer parametro, desde que seja tipado corretamente).
+     * @param relatoryName
+     * @return
+     */
+    public static ClientType getClientTypeByName( String relatoryName){
+        /**
+         * Values() retorna todos os tipos enumerados
+         */
+        for(ClientType clientType: values()){
+            if(clientType.getRELATORY_NAME() == relatoryName) return clientType;
+        }
+        return null;
+    }
+
     public int getVALUE() {
         return VALUE;
     }
