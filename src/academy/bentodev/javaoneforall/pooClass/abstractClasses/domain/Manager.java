@@ -8,4 +8,9 @@ public class Manager extends Employee{
          */
         super(name, salary);
     }
+
+    @Override
+    public void BonusCalc() {
+        this.salary = this.salary + this.salary * 0.14;
+    }
 }
