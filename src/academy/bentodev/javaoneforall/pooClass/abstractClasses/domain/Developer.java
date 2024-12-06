@@ -16,4 +16,14 @@ public class Developer extends Employee{
     public void BonusCalc(){
         this.salary = this.salary + this.salary * 0.07;
     }
+
+    /**
+     * Uma regra importante é: Uma classe abstrata não tem obrigação
+     * de cumprir com contrato de instanciar metodos, mas a primeira classe
+     * concreta que extender uma abstrata, precisará cumprir.
+     */
+
+    public void print(){
+
+    }
 }

@@ -9,7 +9,7 @@ package academy.bentodev.javaoneforall.pooClass.abstractClasses.domain;
  * OBS.: Uma classe abstrata não pode ser instanciada, ela só poderar ser extendida como
  * uma classe pai, sempre.
  */
-public abstract class Employee {
+public abstract class Employee extends Person {
     protected String name;
     protected double salary;
 
