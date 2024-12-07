@@ -6,5 +6,6 @@ public class DataLoaderTest {
     public static void main(String[] args) {
         DatabaseLoader dbBaseLoader = new DatabaseLoader();
         dbBaseLoader.load();
+        dbBaseLoader.checkPermission();
     }
 }
