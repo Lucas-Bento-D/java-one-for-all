@@ -16,6 +16,6 @@ public class ClientTest {
         System.out.println(client2);
 
         System.out.println(PaymentType.DEBIT.DiscountCalc(100));
-        System.out.println(ClientType.getClientTypeByName("Pessoa juridica12"));
+        System.out.println(ClientType.getClientTypeByName("Pessoa juridica"));
     }
 }
