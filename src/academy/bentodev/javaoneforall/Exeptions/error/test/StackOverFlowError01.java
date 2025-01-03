@@ -1,8 +1,9 @@
-package academy.bentodev.javaoneforall.Exeptions.test;
+package academy.bentodev.javaoneforall.Exeptions.error.test;
 
 /**
- * O StackOverflow error é um erro onde o código estoura a stack da aplicação por chamar demais algum método.
- * De modo geral, error é algo que acontece na JVM que não conseguimos recuperar no tempo de execução, tendo como unica
+ * Filho da classe Error(filho da classe Throwable), StackOverflow error é um erro onde o código estoura a stack da aplicação
+ * por chamar demais algum método. De modo geral, error é algo que acontece na JVM que não conseguimos recuperar no tempo
+ * de execução, tendo como unica
  * alternativa parar a execução para resolução do problema.
  */
 
