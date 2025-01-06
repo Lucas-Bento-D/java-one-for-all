@@ -1,5 +1,9 @@
 package academy.bentodev.javaoneforall.Exeptions.runtime.test;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class RuntimeExceptionTest04 {
     /**
      * Podemos capturar multiplas exeções em um try catch simplesmente adicionando varios catches, isso é ultil para
@@ -24,5 +28,21 @@ public class RuntimeExceptionTest04 {
         } catch (RuntimeException e) {
             System.out.println("Dentro de RuntimeException");
         }
+
+        /**
+         * Caso tivermos tipos de erros que tenham a mesma linha de herança, mas não sendo nenhum mais generico que o outro
+         * podemos utilizar um catch para varios erros utilizando o pipe. Caso utilizarmos o catch com classes mais genericas
+         * e classes mais especializadas, teremos um erro por que a classe generica irá sempre ativar antes da especializada.
+         * Ou seja, não podemos utilizar o RuntimeException junto com o IllegalArgumentException, pois o RuntimeException
+         * sempre irá ser ativado e Illegal não.
+         */
+        try{
+            maybeThrowsError();
+        } catch (SQLException | FileNotFoundException e) {
+            System.out.println("um erro ou outro");
+        }
+    }
+    private static void maybeThrowsError() throws SQLException, FileNotFoundException {
+
     }
 }
