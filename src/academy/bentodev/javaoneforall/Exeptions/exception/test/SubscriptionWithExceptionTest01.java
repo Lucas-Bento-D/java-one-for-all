@@ -18,5 +18,4 @@ public class SubscriptionWithExceptionTest01 {
             throw new RuntimeException(e);
         }
     }
-
 }
