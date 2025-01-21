@@ -1,4 +1,4 @@
-package academy.bentodev.javaoneforall.Dates.Test;
+package academy.bentodev.javaoneforall.Formatation.Test;
 
 import java.text.DateFormat;
 import java.util.Calendar;
