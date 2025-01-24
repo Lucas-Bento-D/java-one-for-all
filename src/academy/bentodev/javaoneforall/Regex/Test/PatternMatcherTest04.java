@@ -23,6 +23,9 @@ public class PatternMatcherTest04 {
          * | -> ou
          * $ -> fim da linha
          * . -> caracter coringa
+         * ^ -> retorna oque vc precisa no começo da linha
+         * [^ seguido do que vc deseja nao encontrar] -> quando vc usa o ^ dentro de um cochetes com alguma variavel, ela age na procura
+         * de tudo que não for aquela variavel
          */
 
         String regex = "(\\S)+@([a-zA-Z])+(\\.([a-zA-Z])+){1,2}";
