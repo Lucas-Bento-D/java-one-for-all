@@ -21,6 +21,8 @@ public class EqualsTest01 {
 
         // objetos diferentes
         System.out.println(s1 == s2);
+
+        // Sobreescrevendo o metodo equals, nos podemos fazer verificacoes para validarmos se os objetos sao iguais
         System.out.println(s1.equals(s2));
 
 //        para referencia ser igual, precisariamos fazer com que nao so o valor de s2 fosse igual ao de s1, mas que s2 recebesse s1
