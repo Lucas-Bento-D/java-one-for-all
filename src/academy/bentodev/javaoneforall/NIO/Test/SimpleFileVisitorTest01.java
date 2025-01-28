@@ -9,7 +9,7 @@ import java.nio.file.attribute.BasicFileAttributes;
  * Vale citar o uso da classe ListAllFiles que extendeu o SompleFileVisitor e com polimorfismo reescreveu a funcao visitFile
  * que retornava um FileVisitResult que é um enum. Nesse caso usamos o CONTINUE
  */
-class ListAllFiles extends SimpleFileVisitor<Path>{
+class ListJavaFiles extends SimpleFileVisitor<Path>{
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
         boolean isJavaFile = file.getFileName().toString().endsWith(".java");
@@ -21,6 +21,6 @@ class ListAllFiles extends SimpleFileVisitor<Path>{
 public class SimpleFileVisitorTest01 {
     public static void main(String[] args) throws IOException {
         Path root = Paths.get(".");
-        Files.walkFileTree(root, new ListAllFiles());
+        Files.walkFileTree(root, new ListJavaFiles());
     }
 }
