@@ -1,16 +1,44 @@
 package academy.bentodev.javaoneforall.Serealization.Domain;
 
-import java.io.Serializable;
+import java.io.*;
 
 public class Student implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 8659165867913043972L;
+
     private long id;
     private String name;
-    private String password;
+    // transient é usado para setar que o atributo não deve ser serializado
+    private transient String password;
+    private static String schoolName = "School name";
+
+    private Class classe;
 
     public Student(long id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
+    }
+
+    @Serial
+    private void writeObject(ObjectOutputStream oOs){
+        try{
+            oOs.defaultWriteObject();
+            oOs.writeUTF(classe.getName());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Serial
+    private void readObject(ObjectInputStream oOs){
+        try{
+            oOs.defaultReadObject();
+            String className = oOs.readUTF();
+            classe = new Class(className);
+        } catch (ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -19,7 +47,12 @@ public class Student implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", School='" + schoolName + '\'' +
                 '}';
+    }
+
+    public void setClasse(Class classe) {
+        this.classe = classe;
     }
 
     public String getName() {

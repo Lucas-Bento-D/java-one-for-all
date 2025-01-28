@@ -1,5 +1,6 @@
 package academy.bentodev.javaoneforall.Serealization.Test;
 
+import academy.bentodev.javaoneforall.Serealization.Domain.Class;
 import academy.bentodev.javaoneforall.Serealization.Domain.Student;
 
 import java.io.FileOutputStream;
@@ -17,6 +18,8 @@ import java.nio.file.Paths;
 public class SerializationTest01 {
     public static void main(String[] args) {
         Student student = new Student(1, "Naruto 2", "asdjkl1n201");
+        Class classe = new Class("Turma aqui");
+        student.setClasse(classe);
 //        serialize(student);
         serialized();
     }
