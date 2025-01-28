@@ -29,7 +29,7 @@ public class Student implements Serializable {
             e.printStackTrace();
         }
     }
-
+    // serial foi implementado apenas na versao 14
     @Serial
     private void readObject(ObjectInputStream oOs){
         try{
