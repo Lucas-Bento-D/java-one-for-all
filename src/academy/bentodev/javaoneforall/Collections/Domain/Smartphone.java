@@ -39,9 +39,19 @@ public class Smartphone {
         return serialNumber != null && serialNumber.equals((smartphone.serialNumber));
     }
 
+
+    /**
+     * Para sobreescrever o método hashCode, precisamos levar algumas regras em consideração
+     * Se x.equals(y) == true, y.hashCode() == x.hashCode()
+     * Se y.hashCode() == x.hashCode() não necessariamente o equals de y.hashCode(x) tem que ser true
+     * x.equals(y) == false
+     * y.hashCode() != x.hashCode() x.equals(y) deverá ser false
+     * @return
+     */
     @Override
     public int hashCode() {
-        return Objects.hash(serialNumber, brand);
+        //0 para false, 1 para true
+        return this.serialNumber == null ? 0 : this.serialNumber.hashCode() ;
     }
 
     public void setSerialNumber(String serialNumber) {
