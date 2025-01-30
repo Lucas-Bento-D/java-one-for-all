@@ -2,7 +2,7 @@ package academy.bentodev.javaoneforall.Collections.Domain;
 
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga> {
     private long id;
     private String name;
     private double price;
@@ -15,7 +15,27 @@ public class Manga {
         this.price = price;
     }
 
+    /**
+     * Regras para fazer o Override de compareTo(metodo que vem de da interface Comparable)
+     * retorna positivo se this < parametro(o)
+     * retorna 0 se this == parametro
+     * retorna positivo se this > parametro
+     * @param o the object to be compared.
+     * @return
+     */
 
+    @Override
+    public int compareTo(Manga o) {
+        // Vamos usar a prop id para comparar
+        if(this.id < o.id) {
+            return -1;
+        } else if (this.id == o.getId()) {
+            return 0;
+        }else {
+            return 1;
+        }
+
+    }
 
     @Override
     public boolean equals(Object o) {
