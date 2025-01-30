@@ -4,7 +4,15 @@ import academy.bentodev.javaoneforall.Collections.Domain.Manga;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+class MangaByIdComparator implements Comparator<Manga>{
+    @Override
+    public int compare(Manga manga1, Manga manga2) {
+        return manga1.getId().compareTo(manga2.getId());
+    }
+}
 
 public class SortMangaTest01 {
     public static void main(String[] args) {

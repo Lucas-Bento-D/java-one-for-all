@@ -3,7 +3,7 @@ package academy.bentodev.javaoneforall.Collections.Domain;
 import java.util.Objects;
 
 public class Manga implements Comparable<Manga> {
-    private long id;
+    private Long id; // mudando de long para Long para ter acesso a metodos presentes no wrapper
     private String name;
     private double price;
 
@@ -27,13 +27,17 @@ public class Manga implements Comparable<Manga> {
     @Override
     public int compareTo(Manga o) {
         // Vamos usar a prop id para comparar
-        if(this.id < o.id) {
-            return -1;
-        } else if (this.id == o.getId()) {
-            return 0;
-        }else {
-            return 1;
-        }
+//        if(this.id < o.id) {
+//            return -1;
+//        } else if (this.id == o.getId()) {
+//            return 0;
+//        }else {
+//            return 1;
+//        }
+
+//        return this.id.compareTo(o.getId()); // Com o wrapper essa linha tem a mesma finalidade dos ifs acima
+        //ou compare por name
+        return this.name.compareTo(o.getName());
 
     }
 
