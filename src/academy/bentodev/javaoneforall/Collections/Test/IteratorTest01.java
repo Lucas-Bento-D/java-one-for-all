@@ -4,11 +4,18 @@ import academy.bentodev.javaoneforall.Collections.Domain.Manga;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class IteratorTest01 {
     public static void main(String[] args) {
-        List<Manga> mangas = new ArrayList<>(6);
+
+        /**
+         * Podemos usar também o LinkedList onde basicamente cada item de um array, sabe do anterior a ele e o proximo também
+         * e levando em conta o big O notation: https://www.bigocheatsheet.com/
+         * percebemos que o LinkedList é mais performatico que o Array para deletar itens
+         */
+        List<Manga> mangas = new LinkedList<>();
         mangas.add(new Manga(5, "Berserk", 19.9, 0));
         mangas.add(new Manga(4, "Hellsing", 9.6, 5));
         mangas.add(new Manga(3, "Attack on Titan", 3.2, 12));
