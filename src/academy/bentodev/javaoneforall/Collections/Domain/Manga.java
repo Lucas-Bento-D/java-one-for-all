@@ -6,6 +6,12 @@ public class Manga implements Comparable<Manga> {
     private Long id; // mudando de long para Long para ter acesso a metodos presentes no wrapper
     private String name;
     private double price;
+    private int quantity;
+
+    public Manga(long id, String name, double price, int quantity){
+        this(id, name, price);
+        this.quantity = quantity;
+    }
 
     public Manga(long id, String name, double price){
         Objects.requireNonNull(id, "Id is required for initializate constructor");
@@ -63,6 +69,10 @@ public class Manga implements Comparable<Manga> {
                 '}';
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
     public String getName() {
         return name;
     }
@@ -85,5 +95,9 @@ public class Manga implements Comparable<Manga> {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
