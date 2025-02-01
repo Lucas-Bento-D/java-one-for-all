@@ -5,15 +5,15 @@ import java.util.Objects;
 public class Manga implements Comparable<Manga> {
     private Long id; // mudando de long para Long para ter acesso a metodos presentes no wrapper
     private String name;
-    private double price;
+    private Double price;
     private int quantity;
 
-    public Manga(long id, String name, double price, int quantity){
+    public Manga(long id, String name, Double price, int quantity){
         this(id, name, price);
         this.quantity = quantity;
     }
 
-    public Manga(long id, String name, double price){
+    public Manga(long id, String name, Double price){
         Objects.requireNonNull(id, "Id is required for initializate constructor");
         Objects.requireNonNull(name, "Name is required for initializate constructor");
         this.id = id;
