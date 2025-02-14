@@ -28,12 +28,8 @@ public class ComportamentPeerParamTest02 {
                 new Car("red", 2016));
 
     public static void main(String[] args) {
-        List<Car> filteredCars = filter(cars, new CarPredicate() {
-            @Override
-            public boolean test(Car car) {
-                return car.getColor().equals("green");
-            }
-        });
+        // mudando o filter para receber uma lambda como Predicate
+        List<Car> filteredCars = filter(cars, car -> car.getColor().equals("green"));
         System.out.println(filteredCars);
     }
 
