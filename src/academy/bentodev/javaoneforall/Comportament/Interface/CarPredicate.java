@@ -9,7 +9,7 @@ public interface CarPredicate {
      * Lambda sintaxe
      * (param) -> expressao
      * (Car car) -> car.getColor.equals("green")
-     * OBS.: lambdas precisam ter retorno(geralmente definido pelo metodo contratual)
+     * OBS.: lambdas precisam ter retorno definido pelo metodo contratual
      * Lambdas sao funcoes anonimas e tem o como objetivo deixar o codigo mais conciso
      */
 }
